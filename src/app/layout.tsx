@@ -1,4 +1,5 @@
 import SessionWrapper from "@/lib/sessionWrapper";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -27,7 +28,10 @@ export default function RootLayout({
 	return (
 		<SessionWrapper>
 			<html lang="en">
-				<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+				<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+					{children}
+					<SpeedInsights />
+				</body>
 			</html>
 		</SessionWrapper>
 	);
