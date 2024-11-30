@@ -18,4 +18,5 @@ export const authOptions: NextAuthOptions = {
 			clientSecret: process.env.GOOGLE_CLIENT_SECRET as string, // Secret client Google depuis les variables d'environnement
 		}),
 	],
+	secret: process.env.SECRET as string, // Clé secrète pour l'authentification
 };
